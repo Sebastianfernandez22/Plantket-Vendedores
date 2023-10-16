@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Plantket</title>
+    <style>
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .page-link {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" style="background-color: #E7E8CD">
+        <!-- Navbar -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/icono plantket.png" alt="Logo" width="250" height="80"
+                    class="d-inline-block align-text-top">
+            </a>
+        </div>
+    </nav><!-- Navbar -->
+
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Vendedores</h1>
+        <form class="mb-4">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <label for="ordenarPor" class="form-label">Ordenar por:</label>
+                    <select class="form-select" id="ordenarPor">
+                        <option value="nombreAZ">Nombre A a Z</option>
+                        <option value="nombreZA">Nombre Z a A</option>
+                        <option value="clasificacionAsc">Clasificación Orden Creciente</option>
+                        <option value="valoracionDesc">Valoración Mayor a Menor</option>
+                        <option value="comentarioDesc">Comentario Mayor a Menor</option>
+                        <option value="comentarioAsc">Comentario Menor a Mayor</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <!-- Mensaje de cantidad de elementos mostrados -->
+        <p class="text-center mt-4 pagination-message">Mostrando 1-12 de 22 elementos</p>
+        <!-- ... (tu código HTML) ... -->
+
+        <div class="text-center mt-4">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item disabled" id="prevPage">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#" data-page="1">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+                    <li class="page-item" id="nextPage">
+                        <a class="page-link disabled" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <!-- Primera mitad de tarjetas -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 " id="page1">
+
+            <!-- Tarjeta 1 -->
+            <div class="col" id="card1">
+                <div class="card custom-card">
+                    <img src="./img/1.1.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">CultiGarden</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/29-cultigarden" class="btn btn-primary">Ver
+                            Catálogo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col" id="card2">
+                <div class="card custom-card">
+                    <img src="./img/2.2.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Agricola Limón Verde</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/24-agricola-limon-verde"
+                            class="btn btn-primary">Ver Catálogo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 3  ... -->
+            <div class="col" id="card3">
+                <div class="card custom-card">
+                    <img src="./img/3.3.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Cultivos Laguna</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/28-cultivos-laguna" class="btn btn-primary">Ver
+                            Catálogo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ... Tarjetas 4  ... -->
+            <style>
+                .icon.instagram1 {
+                    margin-left: 50px;
+                    /* Ajusta este valor según tus necesidades para moverlo hacia la derecha */
+                    background: radial-gradient(circle at 35% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #979aa3 90%);
+                    width: 30px;
+                    /* Ancho igual a la altura para hacerlo cuadrado */
+                    height: 90px;
+                    /* Altura del icono */
+                    border-radius: 11px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include flex(row wrap, center, center);
+                    width: 10%;
+                    height: 35px;
+                    font-size: 2rem;
+                    margin-top: -40px;
+                    /* Ajusta este valor según sea necesario para subir el icono */
+                    color: white;
+                    /* Color blanco */
+                }
+            </style>
+
+            <div class="col" id="card4">
+                <div class="card custom-card">
+                    <img src="./img/4.4.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Exclusive Plants</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/69-Exclusive-Plants" class="btn btn-primary">Ver
+                            Catálogo</a>
+                        <a target="_blank" href="https://web.facebook.com/profile.php?id=100083914244792"
+                            class="social-button--facebook">
+                            <i class="icon--facebook"></i>
+                        </a>
+                        <div class="icon instagram1">
+                            <a href="https://www.instagram.com/exclusiveplants/" target="_blank">
+                                <i class="fab fa-instagram" style="color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ... Tarjetas 5 ... -->
+            <div class="col" id="card5">
+                <div class="card custom-card">
+                    <img src="./img/5.5.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">La Planteria</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/15-La-Planteria" class="btn btn-primary">Ver
+                            Catálogo</a>
+                        <div class="icon instagram">
+                            <a href="https://www.instagram.com/la.plaanteria.cl/" target="_blank">
+                                <i class="fab fa-instagram" style="color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 6  ... -->
+            <div class="col" id="card6">
+                <div class="card custom-card">
+                    <img src="./img/6.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Plantinera Ornamental</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/6-plantinera-ornamental"
+                            class="btn btn-primary">Ver Catálogo</a>
+                        <a target="_blank"
+                            href="https://www.facebook.com/p/Plantinera-Ornamental-Roelplant-100076430945214/"
+                            class="social-button--facebook">
+                            <i class="icon--facebook"></i>
+                        </a>
+                        <div class="icon instagram1">
+                            <a href="https://www.instagram.com/roelplant" target="_blank">
+                                <i class="fab fa-instagram" style="color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 7  ... -->
+            <div class="col" id="card7">
+                <div class="card custom-card">
+                    <img src="./img/7.7.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Plantket Chile</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/71-PlantKet-Chile" class="btn btn-primary">Ver
+                            Catálogo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 8  ... -->
+            <div class="col" id="card8">
+                <div class="card custom-card">
+                    <img src="./img/8.8.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero Agromultiflorales</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/17-Vivero-Agromultiflorales"
+                            class="btn btn-primary">Ver Catálogo</a>
+                        <div class="icon instagram">
+                            <a href="https://www.instagram.com/viveroagromultiflorales" target="_blank">
+                                <i class="fab fa-instagram" style="color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 9  ... -->
+            <div class="col" id="card9">
+                <div class="card custom-card">
+                    <img src="./img/9.9.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero Almaciguera</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/1-Vivero-Almaciguera"
+                            class="btn btn-primary">Ver Catálogo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 10  ... -->
+            <div class="col" id="card10">
+                <div class="card custom-card">
+                    <img src="./img/10.10.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero Arcoiris</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/18-Vivero-Arcoiris" class="btn btn-primary">Ver
+                            Catálogo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ... Tarjetas 11  ... -->
+            <div class="col" id="card11">
+                <div class="card custom-card">
+                    <img src="./img/11.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero Color</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/7-Vivero-Color" class="btn btn-primary">Ver
+                            Catálogo</a>
+                        <a target="_blank" href="https://www.facebook.com/Viverocolor" class="social-button--facebook">
+                            <i class="icon--facebook"></i>
+                        </a>
+                        <div class="icon instagram1">
+                            <a href="https://www.instagram.com/viverocolor_/" target="_blank">
+                                <i class="fab fa-instagram" style="color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda mitad de tarjetas (Página 2) -->
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="page2" style="display: none;">
+            <div class="col" id="card12">
+                <div class="card custom-card">
+                    <img src="./img/12.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero el Chincolito</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/23-vivero-el-chincolito"
+                            class="btn btn-primary">Ver Catálogo</a>
+                        <div class="icon instagram">
+                            <a href="https://www.instagram.com/viveroelchincolito/" target="_blank">
+                                <i class="fab fa-instagram" style="color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 13  ... -->
+            <div class="col" id="card13">
+                <div class="card custom-card">
+                    <img src="./img/13.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero el Cultivador</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/22-Vivero-el-Cultivador"
+                            class="btn btn-primary">Ver Catálogo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 14  ... -->
+            <div class="col" id="card14">
+                <div class="card custom-card">
+                    <img src="./img/14.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero El Roble</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/11-Vivero-el-roble" class="btn btn-primary">Ver
+                            Catálogo</a>
+                        <div class="icon instagram">
+                            <a href="https://www.instagram.com/_viveroelroble_/" target="_blank">
+                                <i class="fab fa-instagram" style="color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 15  ... -->
+            <div class="col" id="card15">
+                <div class="card custom-card">
+                    <img src="./img/15.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero in Green</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/48-Vivero-In-Green" class="btn btn-primary">Ver
+                            Catálogo</a>
+                        <div class="icon instagram">
+                            <a href="https://instagram.com/ingreenvivero" target="_blank">
+                                <i class="fab fa-instagram" style="color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 16  ... -->
+            <div class="col" id="card16">
+                <div class="card custom-card">
+                    <img src="./img/16.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero Limache</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/21-Vivero-Limache" class="btn btn-primary">Ver
+                            Catálogo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 17  ... -->
+            <div class="col" id="card17">
+                <div class="card custom-card">
+                    <img src="./img/17.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero los Aromos</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/20-vivero-los-aromos"
+                            class="btn btn-primary">Ver Catálogo</a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 18  ... -->
+            <div class="col" id="card18">
+                <div class="card custom-card">
+                    <img src="./img/18.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero loreto Montenegro</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/31-vivero-loreto-montenegro"
+                            class="btn btn-primary">Ver Catálogo</a>
+                        <div class="icon instagram">
+                            <a href="https://www.instagram.com/loretomontenegrovivero/" target="_blank">
+                                <i class="fab fa-instagram" style="color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 19  ... -->
+            <div class="col" id="card19">
+                <div class="card custom-card">
+                    <img src="./img/19.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero san Jose (La Calera)</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/62-Viveros-San-Jose" class="btn btn-primary">Ver
+                            Catálogo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 20  ... -->
+            <div class="col" id="card20">
+                <div class="card custom-card">
+                    <img src="./img/20.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero san Pedro</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/12-Vivero-San-Pedro" class="btn btn-primary">Ver
+                            Catálog</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 21  ... -->
+            <div class="col" id="card21">
+                <div class="card custom-card">
+                    <img src="./img/21.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero Talhuen</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/27-vivero-talhuen" class="btn btn-primary">Ver
+                            Catálogo</a>
+                        <div class="icon instagram">
+                            <a href="https://instagram.com/talhuen_lacruz" target="_blank">
+                                <i class="fab fa-instagram" style="color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ... Tarjetas 22  ... -->
+            <div class="col" id="card22">
+                <div class="card custom-card">
+                    <img src="./img/19.png" class="card-img-top custom-image" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Vivero san Jose</h5>
+                        <p class="card-text">Descripción breve de la tarjeta.</p>
+                        <a href="https://plantket.cl/plantket-cl/seller/44-Vivero-San-Jose" class="btn btn-primary">Ver
+                            Catálogo</a>
+                        <div class="icon instagram">
+                            <a href="https://instagram.com/sanjosevivero" target="_blank">
+                                <i class="fab fa-instagram" style="color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const cardsPerPage = 11;
+        let currentPage = 1;
+
+        function showPage(pageNumber) {
+            // Ocultar todas las páginas
+            for (let i = 1; i <= 2; i++) {
+                document.getElementById(`page${i}`).style.display = 'none';
+            }
+
+            // Mostrar la página actual
+            document.getElementById(`page${pageNumber}`).style.display = 'flex';
+
+            // Calcular el rango de elementos mostrados
+            const startRange = (pageNumber - 1) * cardsPerPage + 1;
+            const endRange = Math.min(pageNumber * cardsPerPage, 22);
+
+            // Actualizar el mensaje de mostrado
+            document.querySelector('.pagination-message').textContent = `Mostrando ${startRange}-${endRange} de 22 elementos`;
+        }
+
+        // Mostrar la primera página cuando se carga la página
+        window.onload = function () {
+            showPage(1);
+        };
+
+        // Agregar escuchadores de eventos a los enlaces de paginación
+        document.querySelectorAll('.pagination a.page-link').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const pageNumber = parseInt(this.getAttribute('data-page'));
+                showPage(pageNumber);
+            });
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
