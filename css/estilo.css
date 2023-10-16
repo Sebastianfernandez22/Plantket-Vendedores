@@ -51,7 +51,7 @@ body {
   font-weight: 400;
   background: #221662;
   color: white;
-  background-image: linear-gradient(135deg, rgba(228, 217, 217, 0.8) 0%,rgba(149, 156, 149, 0.5) 100%);
+  background-image: linear-gradient(135deg, rgba(205, 196, 196, 0.8) 0%,rgba(140, 209, 140, 0.5) 100%);
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
@@ -119,4 +119,25 @@ body {
   font-style: normal;
 }
 
+.card {
+  border: 2px solid #161616; /* Ajusta el grosor y el color del borde según tus preferencias */
+  border-radius: 10px; /* Ajusta el radio de la esquina del borde según tus preferencias */
+  overflow: hidden; /* Evita que el borde se superponga a la imagen */
+}
+
+.card-body {
+  border-top: 1px solid #000000; /* Línea divisoria entre la imagen y la descripción */
+  padding: 15px;
+}
+
+.custom-image {
+  width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+  height: 200px; /* Ajusta la altura de la imagen según tus preferencias */
+  object-fit: cover; /* Escala la imagen para cubrir completamente el contenedor */
+}
+
+.custom-card {
+  margin: 10px; /* Ajusta el margen alrededor de cada tarjeta según tus preferencias */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra suave para resaltar la tarjeta */
+}
 
