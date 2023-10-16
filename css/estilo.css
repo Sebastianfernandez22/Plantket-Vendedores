@@ -110,14 +110,7 @@ body {
   margin-top: -40px; /* Ajusta este valor según sea necesario para subir el icono */
   color: white; /* Color blanco */
 }
-@font-face {
-  font-family: 'Font Awesome 6 Brands';
-  src: url('ruta/local/fa-brands-400.woff2') format('woff2'),
-       url('ruta/local/fa-brands-400.woff') format('woff'),
-       url('ruta/local/fa-brands-400.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
+
 
 .card {
   border: 2px solid #161616; /* Ajusta el grosor y el color del borde según tus preferencias */
